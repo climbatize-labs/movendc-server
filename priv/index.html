@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>zoycam</title>
+<script src="assets/js/command.js"></script>
+</head>
+<body style="margin:0px;background-color:white;font-family:Arial;" onLoad="connect(0, 0)">
+<div id="menu" style="width:99%;background-color:grey;text-align:center;overflow:hidden;padding:0.5%;">
+    <div style="float:left;width:80%;">
+        <div style="float:left;cursor:pointer;margin-right:20px;" onClick="show_loginsignup(true)">Login</div>
+        <div style="float:left;cursor:pointer;" onClick="show_loginsignup(false)">Signup</div>
+    </div>
+    <div style="float:left;width:20%;text-align:right;">
+        <div id="logged" style="float:left;margin-right:20px;cursor:pointer" onClick="logout()"></div>
+        <div id="connected" style="float:left;">Disconnected</div>
+    </div>
+</div>
+<div id="panel_signup" style="display:none;width:100%;text-align:center;overflow:hidden;">
+    <div id="signup_error" style="min-width:300px;height:30px;overflow:hidden"></div>
+    Username:<br />
+    <input type="text" style="min-width:300px;" id="signup_username" /><br /><br />
+    Password:<br />
+    <input type="password" style="min-width:300px;" id="signup_password" /><br /><br />
+    <input type="password" style="min-width:300px;" id="signup_password_repeat" /><br /><br />
+    <input type="submit" style="min-width:300px;" value="Signup" onClick="form_signup()"/>
+</div>
+<div id="panel_login" style="width:100%;text-align:center;">
+    <div id="login_error" style="min-width:300px;height:30px;overflow:hidden"></div>
+    Username:<br />
+    <input type="text" style="min-width:300px;" id="username" /><br /><br />
+    Password:<br />
+    <input type="password" style="min-width:300px;" id="password" /><br /><br />
+    <input type="submit" style="min-width:300px;" value="Login" onClick="form_login()"/>
+</div>
+<div id="panel_cam" style="display:none;width:100%;overflow:hidden;height:50%;font-size:12pt;">
+</div>
+<div style="display:none;width:100%;overflow:hidden;height:50%;">
+    <div id="term-user" style="float:left;width:50%;border:1px solid blue;border-radius: 10px;opacity: 0.8;">
+    </div>
+    <div id="term-server" style="float:left;width:50%;border:1px solid blue;border-radius: 10px;opacity: 0.8;">
+    </div>
+</div>
+<div id="footer" style="position:absolute;bottom:0;width:99%;background-color:grey;text-align:center;overflow:hidden;padding:0.5%;">
+    2019 &copy; zoycam.com
+</div>
+</body>
+</html>
